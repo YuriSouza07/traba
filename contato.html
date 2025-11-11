@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contato - Artwalk Tênis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><h1>Artwalk Tênis</h1></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="precos.html">Preços</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li>
+          <li class="nav-item"><a class="nav-link" href="carrinho.html">Carrinho 🛒</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4 fw-bold" data-aos="zoom-in">Entre em contato conosco</h2>
+
+    <form data-aos="fade-up" data-aos-duration="1000">
+      <div class="mb-3">
+        <label class="form-label">Digite seu Nome</label>
+        <input type="text" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Digite seu Email</label>
+        <input type="email" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Relate sua mensagem aqui</label>
+        <textarea class="form-control" rows="4" required></textarea>
+      </div>
+      <button class="btn btn-primary">Enviar</button>
+    </form>
+
+    <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="300">
+      <a href="index.html" class="btn btn-secondary px-4 py-2">Voltar</a>
+    </div>
+
+    <hr class="my-5" data-aos="fade-up">
+
+    <div data-aos="fade-up" data-aos-duration="1000">
+      <h4>Localização da nossa loja</h4>
+      <p>Rua Nicarágua, 630 - Penha - Rio de Janeiro, RJ</p>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.0443749764027!2d-43.2804388!3d-22.837847699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997b65aa8d4dd3%3A0x526888adeb739b62!2sR.%20Nicar%C3%A1gua%2C%20630%20-%20Penha%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021020-050!5e0!3m2!1sen!2sbr!4v1762560738872!5m2!1sen!2sbr" 
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white text-center p-3 mt-5" data-aos="fade-up">
+    <p>&copy; 2026 Artwalk Tênis | Venham conferir nossos Tênis</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800, // duração da animação
+      once: true     // anima apenas uma vez
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br"> 

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artwalk Tênis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><h1>Artwalk Tênis</h1></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="precos.html">Preços</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+          <li class="nav-item"><a class="nav-link" href="carrinho.html">Carrinho 🛒</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho - Loja de Tênis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+    }
+
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .produto {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 230px;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .produto img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .produto h3 {
+      margin: 10px 0 5px;
+    }
+
+    .produto p {
+      color: #333;
+      font-weight: bold;
+    }
+
+    .produto button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .produto button:hover {
+      background-color: #218838;
+    }
+
+    .carrinho {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    .item-carrinho {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .item-carrinho button {
+      background-color: #dc3545;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .total {
+      text-align: right;
+      margin-top: 15px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .finalizar {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    .finalizar:hover {
+      background-color: #0069d9;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Carrinho</h1>
+    <p>Escolha seu modelo favorito e adicione no seu carrinho!</p>
+  </header>
+
+  <div class="container">
+    <!-- Produtos -->
+    <div class="produtos" id="lista-produtos">
+      <!-- Produtos serão adicionados via JavaScript -->
+    </div>
+
+    <!-- Carrinho -->
+    <div class="carrinho">
+      <h2>Seu Carrinho</h2>
+      <div id="itens-carrinho">
+        <p>Nenhum produto no carrinho.</p>
+      </div>
+      <div class="total">Total: R$ <span id="total">0.00</span></div>
+      <button class="finalizar" id="finalizar">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <script>
+    // Lista de tênis disponíveis
+    const tenis = [
+      { id: 1, nome: "Tênis Nike Air Plus", preco: 499.90, imagem: "https://cdn.dooca.store/104617/products/photoroom-20240421-205128.jpeg?v=1713743898" },
+      { id: 2, nome: "Tênis Adidas Ultraboost 5", preco: 599.90, imagem: "https://assets.adidas.com/images/w_600,f_auto,q_auto/e9109116ea08417b9304af890136d405_9366/Tenis_Ultraboost_Light_Branco_HQ6350_01_standard.jpg" },
+      { id: 3, nome: "Tênis Puma Suede", preco: 420.90, imagem: "https://chloro.com.br/cdn/shop/files/png_3_a2c499c3-8b15-456f-9197-a445fa2e083a_1200x1200.jpg?v=1727890721" },
+      { id: 4, nome: "Tênis Vans Classic", preco: 349.90, imagem: "https://acdn-us.mitiendanube.com/stores/001/115/376/products/vans-old-skool-2-f4893f5c0b6d04363017122415083177-1024-1024.png" },
+      { id: 5, nome: "Tênis Nike Zoomx", preco: 701.90, imagem: "https://teniscorrida.com.br/app/media/images_product/big/174146871/174146871134703-Tenis-Nike-Zoomx-Invincible-Run-Flyknit-3-Masculino---Azul--4-.jpg" },
+      { id: 6, nome: "Tênis Adidas adizero", preco: 1400.00, imagem: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTVqUUjxHtqqiMy6YddUK4ywCBF33tBWsEVM-5meUMThT85b8x1Lt49DoJakHlxAAgyQ2TDf1I17iGz23uyH0CCaJOvWDoBaz5Xe4iOZUsw5DQjtPN2zKLe" },
+      { id: 7, nome: "Tênis Puma Nitro 3", preco: 1300.00, imagem: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTOW2TOA7qqM2DNDwzsMWl6uTLz85uZMyWIV9x2J70GeVLJVIbtrKvSR7GLAgGiIUZVnjJrJSrYbHZPiqu0j08aKPCsp4cC5G6DKxBvlDd-AjOcIwaW1lZvTQ" },
+      { id: 8, nome: "Tênis Mizuno Wave Prophecy 13", preco: 749.99, imagem: "https://mizunobr.vtexassets.com/arquivos/ids/250034-1600-1600?v=638545768365600000&width=1600&height=1600&aspect=true" },
+      { id: 9, nome: "Tênis Olympikus Corre Supra 2", preco: 1299.99, imagem: "https://vulcabras.vtexassets.com/arquivos/ids/319202-1300-1300?v=638826773016630000&width=1300&height=1300&aspect=true" },
+      { id: 10, nome: "Tênis Nike Air Max Plus TN 1 ", preco: 987.99, imagem: "https://cdn.dooca.store/104617/products/90efe2f9-6351-47f2-9409-11196882a20a.jpg?v=1709671682" },
+      { id: 11, nome: "Tênis NB 9060", preco: 649.90, imagem: "https://cdn.awsli.com.br/2500x2500/1203/1203218/produto/267811394/whatsapp-image-2024-05-13-at-14-37-37-538ndsnizs.jpeg" },
+      { id: 12, nome: "Tênis Under Armour", preco: 296.99, imagem: "https://imgcentauro-a.akamaihd.net/1200x1200/M0WG1I3QA5.jpg" }
+    ];
+    let carrinho = [];
+
+    // Renderiza produtos na página
+    const lista = document.getElementById("lista-produtos");
+    tenis.forEach(produto => {
+      lista.innerHTML += `
+        <div class="produto">
+          <img src="${produto.imagem}" alt="${produto.nome}">
+          <h3>${produto.nome}</h3>
+          <p>R$ ${produto.preco.toFixed(2)}</p>
+          <button onclick="adicionarCarrinho(${produto.id})">Adicionar ao Carrinho</button>
+        </div>
+      `;
+    });
+
+    function adicionarCarrinho(id) {
+      const produto = tenis.find(p => p.id === id);
+      carrinho.push(produto);
+      atualizarCarrinho();
+    }
+
+    function removerCarrinho(index) {
+      carrinho.splice(index, 1);
+      atualizarCarrinho();
+    }
+
+    function atualizarCarrinho() {
+      const itensDiv = document.getElementById("itens-carrinho");
+      itensDiv.innerHTML = "";
+
+      if (carrinho.length === 0) {
+        itensDiv.innerHTML = "<p>Nenhum produto no carrinho.</p>";
+      } else {
+        carrinho.forEach((item, index) => {
+          itensDiv.innerHTML += `
+            <div class="item-carrinho">
+              <span>${item.nome}</span>
+              <span>R$ ${item.preco.toFixed(2)}</span>
+              <button onclick="removerCarrinho(${index})">Remover</button>
+            </div>
+          `;
+        });
+      }
+
+      const total = carrinho.reduce((soma, item) => soma + item.preco, 0);
+      document.getElementById("total").textContent = total.toFixed(2);
+    }
+
+    document.getElementById("finalizar").addEventListener("click", () => {
+      if (carrinho.length === 0) {
+        alert("Seu carrinho está vazio!");
+      } else {
+        alert("Compra finalizada! Obrigado por comprar na Artwalk.");
+        carrinho = [];
+        atualizarCarrinho();
+      }
+    });
+  </script>
+   <div class="text-center mt-4">
+      <a href="index.html" class="btn btn-secondary px-4 py-2">Voltar</a>
+    </div>
+<!-- Rodapé -->
+  <footer class="bg-dark text-white text-center p-3 mt-5">
+    <p>&copy; 2026 Artwalk Tênis | Venham conferir nossos Tênis</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
